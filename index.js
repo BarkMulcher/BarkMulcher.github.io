@@ -1,6 +1,7 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
+dotenv.config();
 import * as filestack from 'filestack-js';
-const client = filestack.init(REPLACE_WITH_API_KEY);
+const client = filestack.init(API_KEY);
 client.picker().open();
 
 const API_KEY = process.env.API_KEY
