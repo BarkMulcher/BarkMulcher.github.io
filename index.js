@@ -3,7 +3,7 @@ const client = filestack.init(AI2a0UDY7SGCVr5w9um61z);
 client.picker().open();
 
 window.addEventListener('DOMContentLoaded', function () {
-    const apikey = 'AI2a0UDY7SGCVr5w9um61z';
+    const apikey = 'REPLACE_WITH_API_KEY';
     const client = filestack.init(apikey);
 
     const onProgress = (evt) => {
