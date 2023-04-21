@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
-dotenv.config();
 import * as filestack from 'filestack-js';
 import * as http from 'http';
-import express from 'express';
+dotenv.config();
+// import express from 'express';
 
-const app = express()
+// const app = express()
 const hostname = '127.0.0.1'
 const port = process.env.PORT
 
@@ -30,8 +30,9 @@ client.picker(options).open();
 if (typeof window !== 'undefined') {
     console.log('You are on the browser,You are good to go')
 
+// window.addEventListener('DOMContentLoaded',
 
-window.addEventListener('DOMContentLoaded', function () {
+const fileStackFunc = function() {
 
 
     const apikey = API_KEY;
@@ -64,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function () {
           console.log(err)
         });
     });
-  });
+  };
 
 } else {
     console.log('You are on the server,Cannot execute')
