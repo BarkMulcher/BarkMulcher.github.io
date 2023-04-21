@@ -1,4 +1,4 @@
-# [CollegeBurps](http://www.collegeburps.com){:target="_blank"}
+# [CollegeBurps](http://www.collegeburps.com)
 
 
 # BarkMulcher.github.io
