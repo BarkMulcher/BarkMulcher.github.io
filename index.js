@@ -2,7 +2,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 import * as filestack from 'filestack-js';
 import * as http from 'http';
+import express from 'express';
 
+const app = express()
 const hostname = '127.0.0.1'
 const port = process.env.PORT
 
@@ -19,12 +21,16 @@ server.listen(port, hostname, () => {
 
 const API_KEY = process.env.API_KEY
 const client = filestack.init(API_KEY);
+const options = {
+    fromSources: ['local_file_system', 'instagram', 'facebook']
+};
 
-
-client.picker().open();
+client.picker(options).open();
 
 if (typeof window !== 'undefined') {
     console.log('You are on the browser,You are good to go')
+
+
 window.addEventListener('DOMContentLoaded', function () {
 
 
