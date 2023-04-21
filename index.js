@@ -1,5 +1,5 @@
 import * as filestack from 'filestack-js';
-const client = filestack.init(AI2a0UDY7SGCVr5w9um61z);
+const client = filestack.init(REPLACE_WITH_API_KEY);
 client.picker().open();
 
 window.addEventListener('DOMContentLoaded', function () {
