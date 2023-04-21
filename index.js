@@ -1,9 +1,12 @@
+require('dotenv').config()
 import * as filestack from 'filestack-js';
 const client = filestack.init(REPLACE_WITH_API_KEY);
 client.picker().open();
 
+const API_KEY = process.env.API_KEY
+
 window.addEventListener('DOMContentLoaded', function () {
-    const apikey = 'REPLACE_WITH_API_KEY';
+    const apikey = API_KEY;
     const client = filestack.init(apikey);
 
     const onProgress = (evt) => {
