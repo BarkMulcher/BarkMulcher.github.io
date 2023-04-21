@@ -1,5 +1,5 @@
-const dotenv = require('dotenv');
-const filestack = require('filestack-js')
+import dotenv from 'dotenv';
+
 dotenv.config();
 
 const path = require('path')
@@ -9,7 +9,7 @@ const client = filestack.init(API_KEY);
 const options = {
     fromSources: ['local_file_system', 'instagram', 'facebook']
 };
-
+console.log(API_KEY);
 client.picker(options).open();
 
 window.addEventListener('DOMContentLoaded', function() {
