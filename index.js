@@ -1,7 +1,8 @@
-import dotenv from 'dotenv';
-import * as filestack from 'filestack-js';
+const dotenv = require('dotenv');
+const filestack = require('filestack-js')
 dotenv.config();
 
+const path = require('path')
 
 const API_KEY = process.env.API_KEY
 const client = filestack.init(API_KEY);
