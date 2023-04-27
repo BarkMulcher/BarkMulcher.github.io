@@ -1,14 +1,18 @@
-import dotenv from 'dotenv';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+import * as dotenv from 'dotenv';
+dotenv.config({path: path.join(__dirname, '.env')});
+// console.log(process.env)
+console.log(process.env.API_KEY)
+console.log(dotenv.config())
 import filestack from 'filestack-js';
-
-dotenv.config();
 
 const API_KEY = process.env.API_KEY
 const client = filestack.init(API_KEY);
 const options = {
     fromSources: ['local_file_system', 'instagram', 'facebook']
 };
-console.log(API_KEY);
 client.picker(options).open();
 
 window.addEventListener('DOMContentLoaded', function() {
